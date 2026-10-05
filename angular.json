@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "VPL_UI": {
+    "AuctionUI": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "VPL_UI:build:production"
+              "buildTarget": "AuctionUI:build:production"
             },
             "development": {
-              "buildTarget": "VPL_UI:build:development"
+              "buildTarget": "AuctionUI:build:development"
             }
           },
           "defaultConfiguration": "development"
