@@ -19,7 +19,7 @@
             "allowedCommonJsDependencies": [
        "lodash",
               "moment",
-              "crypto-js"
+              "crypto-js","sweetalert2"
      ],
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
@@ -45,8 +45,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "8kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "10kB",
+                  "maximumError": "10kB"
                 }
               ],
               "outputHashing": "all"

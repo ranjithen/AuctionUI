@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 .registration-container {
   min-height: 100vh;
@@ -114,12 +110,7 @@
 
 @keyframes slideUp {
   from {
-    opacity: 0;* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+    opacity: 0; 
 .registration-container {
   min-height: 100vh;
   background: linear-gradient(
@@ -508,12 +499,7 @@ select.ng-valid.ng-touched {
         transform: rotate(360deg);
     }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+ 
 .registration-container {
   min-height: 100vh;
   background: linear-gradient(
@@ -624,11 +610,7 @@ select.ng-valid.ng-touched {
 
 @keyframes slideUp {
   from {
-    opacity: 0;* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    opacity: 0; 
 
 .registration-container {
   min-height: 100vh;
@@ -748,7 +730,7 @@ select.ng-valid.ng-touched {
     opacity: 1;
     transform: translateY(0);
   }
-    transform: translateY(60px);
+   
   }
 
   to {
@@ -992,7 +974,7 @@ select.ng-valid.ng-touched {
     cursor: not-allowed;
     opacity: 0.7;
 }
-.register-btn:disable* {
+.register-btn:disabled {
     opacity: .7;
     cursor: no*-allowed;
 }
