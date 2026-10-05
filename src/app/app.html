@@ -1,0 +1,103 @@
+
+<app-regisatrion></app-regisatrion>
+
+<!-- 
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+
+          <h2 class="text-center text-primary mb-4">
+            Create Account
+          </h2>
+
+          <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+            <div class="mb-3">
+
+              <input type="text" class="form-control" formControlName="name" placeholder="Enter Full Name">
+
+              <small class="text-danger" *ngIf="registerForm.get('name')?.touched &&
+                       registerForm.get('name')?.invalid">
+                Name is required
+              </small>
+            </div>
+
+
+            <div class="mb-3">
+
+              <input type="text" class="form-control" formControlName="phone" placeholder="Enter Mobile Number">
+            </div>
+
+            <div class="mb-3">
+
+              <input type="password" class="form-control" formControlName="password" placeholder="Enter Password">
+
+              <small class="text-danger" *ngIf="registerForm.get('password')?.touched &&
+                       registerForm.get('password')?.invalid">
+                Minimum 6 characters required
+              </small>
+            </div>
+
+            <div class="mb-3">
+
+              <input type="password" class="form-control" formControlName="confirmPassword"
+                placeholder="Confirm Password">
+            </div>
+
+            <div class="mb-3">
+
+              <select class="form-select" formControlName="role">
+                <option value="0" selected>Select Role</option>
+                <option value="1">Batter</option>
+                <option value="2">Bowler</option>
+                <option value="3">All-Rounder</option>
+                <option value="4">Keeper</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">How days available next week</label>
+              <select class="form-select" formControlName="daysAvailable">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+            
+       
+            <div class="text-center mb-4">
+
+              <div class="profile-container">
+             
+                <img [src]="imagePreview" class="profile-image" alt="Profile">
+
+              </div>
+
+              <input type="file" class="form-control mt-3" accept="image/*" (change)="onFileSelected($event)">
+
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Register
+            </button>
+
+          </form>
+
+          <div class="text-center mt-3">
+            Already have an account?
+            <a routerLink="/login">Login</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,137 @@
+
+
+<div class="registration-container">
+    <div class="registration-card">
+
+        <div class="logo-section">
+            <span class="league-badge">🏏 REGISTRATION </span>
+
+            <p>Vattapinni Premier League</p>
+            <div class="tagline">
+
+            </div>
+        </div>
+
+        <form #playerForm="ngForm" (ngSubmit)="registerPlayer(playerForm)">
+
+            <!-- Player Name -->
+            <div class="input-group">
+                <label>Player Name *</label>
+
+                <input type="text" name="playerName" #playerName="ngModel" [(ngModel)]="player.name" required>
+
+                <small class="error" *ngIf="isSubmitted && playerName.invalid">
+                    Player Name is required
+                </small>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="input-group">
+                <label>Mobile Number *</label>
+
+                <input type="text" name="mobileNumber" #mobileNumber="ngModel" [(ngModel)]="player.phone" required
+                    minlength="10" maxlength="10" pattern="[0-9]{10}">
+
+                <small class="error" *ngIf="isSubmitted && mobileNumber.errors?.['required']">
+                    Mobile Number is required
+                </small>
+
+                <small class="error" *ngIf="isSubmitted && mobileNumber.errors?.['pattern']">
+                    Enter valid 10 digit mobile number
+                </small>
+            </div>
+
+            <!-- Role -->
+            <div class="input-group">
+                <label>Role *</label>
+
+                <select name="role" #role="ngModel" [(ngModel)]="player.roleID" required>
+
+                    <option value="" selected>Select Role</option>
+                    <option value="1">Batsman</option>
+                    <option value="2">Bowler</option>
+                    <option value="3">All Rounder</option>
+                    <option value="4">Wicket Keeper</option>
+
+                </select>
+
+                <small class="error" *ngIf="isSubmitted && role.invalid">
+                    Please select role
+                </small>
+            </div>
+
+            <!-- Available Days -->
+            <div class="input-group">
+                <label>Days Available Next Week *</label>
+
+                <select name="availableDays" #availableDays="ngModel" [(ngModel)]="player.daysAvailable" required>
+
+                    <option value="" selected> Please choose available days</option>
+                    <option value="7">All Days</option>
+                    <option value="1">1 Day</option>
+                    <option value="2">2 Days</option>
+                    <option value="3">3 Days</option>
+                    <option value="4">4 Days</option>
+                    <option value="5">5 Days</option>
+                    <option value="6">6 Days</option>
+                    <option value="-1">Not available this week</option>
+                </select>
+
+                <small class="error" *ngIf="isSubmitted && availableDays.invalid">
+                    Please choose available days
+                </small>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label>Password *</label>
+
+                <input type="password" name="password" #password="ngModel" [(ngModel)]="player.password" minlength="6"
+                    required>
+
+                <small class="error" *ngIf="isSubmitted && password.errors?.['required']">
+                    Password is required
+                </small>
+
+                <small class="error" *ngIf="isSubmitted && password.errors?.['minlength']">
+                    Password must be at least 6 characters
+                </small>
+            </div>
+
+            <!-- Profile Picture -->
+            <div class="input-group" text-align: center>
+                <label>Profile Picture *</label>
+
+                <input type="file" id="profilePic" accept="image/*" hidden (change)="onFileSelected($event)">
+
+                <label for="profilePic" class="upload-btn" text-align="center !important">
+                    📷 Upload Profile Picture
+                    <div class="image-preview">
+                        <img [src]="imagePreview" class="profile-image" text-align="center !important">
+                    </div>
+                </label>
+
+
+
+                <small class="error" *ngIf="isSubmitted && !selectedFile">
+                    Profile Picture is required
+                </small>
+            </div>
+
+            <button type="submit" class="register-btn" [disabled]="isSaving">
+
+                <span *ngIf="!isSaving">
+                    Register Now
+                </span>
+
+                <span *ngIf="isSaving">
+                    <i class="spinner"></i>
+                    Saving...
+                </span>
+
+            </button>
+
+        </form>
+
+    </div>
+</div>
